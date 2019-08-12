@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   has_many :boards
   has_many :bookings
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end

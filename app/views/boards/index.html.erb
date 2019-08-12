@@ -1,3 +1,8 @@
 <div id="boards-index">
-  <h1>Boards list</h1>
+  <h1>List of boards</h1>
+  <ul>
+    <% @boards.each do |board| %>
+      <li><a href="/boards/<%= board.id %>"><%= board.category %>board</a> owner: <a href="/users/<%= board.user.id %>"><%= board.user.full_name %></li>
+    <% end %>
+  </ul>
 </div>
