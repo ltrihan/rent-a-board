@@ -1,4 +1,4 @@
 class Board < ApplicationRecord
   belongs_to :user
-  has_many :bookins
+  has_many :bookings
 end
